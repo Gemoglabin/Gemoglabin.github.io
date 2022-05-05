@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Практика создания адаптивного сайта</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="hightlight/styles/monokai-sublime.min.css">
+</head>
+<body class="element">
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<div class="container  ">
+				<a class="navbar-brand " href="#"><img src="Image/adapt.png" alt="" width="60" height="60" class="d-inline-block align-text-top rounded"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse  justify-content-md-center text-end  h3" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item me-5 ">
+							<a class="nav-link active underline-one" aria-current="page" href="#">Главная</a>
+						</li>
+						<li class="nav-item me-5 ">
+							<a class="nav-link underline-one" href="Topics.html">Темы</a>
+						</li>
+						<li class="nav-item me-5 ">
+							<a class="nav-link underline-one" href="AbautUs.html">О нас</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container text-center mt-5 mb-5">
+		<h1 class="text-shadow">Практика создания адаптивного сайта</h1>
+	</div>
+	<div class="container ">
+		<div class="row">
+			<div class="col-xl-6 order-xl-2 mb-5">
+				<img class="w-100 " src="Image/responsive-1.png" alt="poka ego net">
+			</div>
+			<div class="col-xl-6  mb-5">
+				<p class="">
+					<strong>Адаптивная вёрстка </strong>сайта позволяет веб-страницам автоматически подстраиваться под экраны планшетов и смартфонов. Мобильный интернет-трафик растёт с каждым годом и чтобы эффективно обрабатывать этот трафик, нужно предлагать пользователям адаптивные сайты с удобным интерфейсом.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xl-6 mb-5">
+				<img class="w-100 rounded" src="Image/responsive-verstka1.png" alt="">
+			</div>
+			<div class="col-xl-6">
+				<p class="">
+					Адаптивная вёрстка предполагает отсутствие горизонтальной полосы прокрутки и масштабируемых областей при просмотре на любом устройстве, читабельный текст и большие области для кликабельных элементов. С помощью медиазапросов можно управлять компоновкой и расположением блоков на странице, перестраивая шаблон таким образом, чтобы он адаптировался под разные размеры экранов устройств.
+				</p>
+			</div>
+		</div>
+
+		<div class="row mt-5">
+			<div class="col">
+				<p>Адаптивный дизайн состоит из трёх главных принципов:</p>
+				<ol>
+					<li>Резиновый макет</li>
+					<li>Резиновые изображения</li>
+					<li>Медиазапросы</li>
+				</ol>
+				<h2 class="h1 mt-5">1. Гибкий макет</h2>
+				<p>
+					Для создания гибкого макета мы должны использовать только относительные единицы измерения: em для размера шрифтов и % для размеров элементов. В редком использовании px тоже нет ничего плохого, но лучше свести их использование к минимуму.
+				</p>
+				<p>
+					Раньше ширина этого блога была фиксированной и равнялась 1080px, вместо этого нам нужно взять какое-то более гибкое значение, например 90% окна браузера. При этом я решил, что сайт все равно не должен быть слишком широким, и поэтому сразу же ограничил его ширину до моих любимых 1080px, в итоге было:
+				</p>
+
+				<pre class="h3"><code class="css">h1, #logo, #width, #slogan, #h ul{
+  width:1080px; 
+  margin-left:auto; 
+  margin-right:auto
+}
+</code></pre>
+
+				<p>Стало:</p>
+<pre class="h3"><code class="css">h1, #logo, #width, #slogan, #h ul{
+  width:90%;
+  max-width:1080px;
+  margin-left:auto;
+  margin-right:auto
+}
+</code></pre>
+<p>
+	Надеюсь, суть ясна, теперь перейдём к размерам шрифта, который рассчитывается точно также.
+</p>
+<p>
+	По умолчанию десктопные браузеры выставляют размер шрифта 16px, но нам пиксели не желательны, поэтому если вы хотите оставить это же значение нужно:
+</p>
+<p>
+	16 (нужное значение) / 16(значение по умолчанию) = 1 em
+</p>
+<p>
+	Но я считаю шрифт в 16 пикселей слишком мелким, я предпочитаю 18, поэтому:
+</p>
+<p>
+	18 / 16 = 1.125 em
+</p>
+<p>
+	Пишем в CSS:
+</p>
+<pre class="h3"><code class="css">body{
+  font-family:"Times New Roman";
+  font-size:1.125em;
+}
+</code></pre>
+
+<p>
+	Размер шрифта моего логотипа «Site on!» в фиксированном макете составляет 40px, переведём его в em:
+</p>
+<p>
+	40/18=2.2222em
+</p>
+<p>
+	Вы обратили внимание? Теперь мы делим не на 16px, а на 18px, так как у родителя (у тега body) моего логотипа размер 18px, в итоге CSS:
+</p>
+
+<pre class="h3"><code class="css">body{
+  font-family:"Times New Roman";
+  font-size:1.125em; /* 18px */
+} 
+
+#logo a{
+  text-decoration:none;
+  font-size:2.2222em; /* 40px */
+  color:#000;
+} 
+</code></pre>
+<p>
+	И так с каждым элементом, действительно нудно, не правда ли? Но наши труды с лихвой окупятся в виде стабильного трафика с мобильных устройств.
+</p>
+
+<h2 class="h1 mt-5">2. Гибкие изображения</h2>
+<p>
+	Буду краток: если вы не указываете размеры изображений в атрибутах тега img, то добавляем в ваш CSS:
+</p>
+<pre class="h3"><code class="css">img{
+  max-width:100%;
+}
+</code></pre>
+<p>
+	А если указываете размеры изображений в атрибутах (я указываю и вам советую):
+</p>
+<pre class="h3"><code class="css">img{
+  max-width:100%;
+  height:auto;
+}
+</code></pre>
+<p>
+	Готово!
+</p>
+
+<h2 class="h1 mt-5">
+	3. Медиазапросы
+</h2>
+
+<p>
+	Очень интересная, простая и вместе с этим чрезвычайно полезная вещь - @media. Но давайте сразу о кроссбраузерности… Хорошая новость заключается в том, что большинство современных браузеров поддерживают медиазапросы: среди них Opera 9.5+, Firefox 3.5+, браузеры на базе WebKit, такие как Safari 3+ и Chrome, а также IE 9+.
+</p>
+<p>
+	Да и с мобильными браузерами дела обстоят неплохо. Медиазапросы поддерживают такие браузеры на базе WebKit, как Mobile Safari, webOS производства HP и Android, а также Opera Mobile и Opera Mini. Что касается Windows Phone, с 2011 года на них устанавливается IE9+, который обеспечивает полную поддержку медиазапросов, что не может не радовать.
+</p>
+<p>
+	Старые версии браузеров, включая IE8 и ниже, тоже не проблема. Существуют специальные JavaScript библиотеки, призванные обеспечить 100% кроссбраузерность начиная с IE5, например, css3-mediaqueries.js или respond.js.
+</p>
+<p>
+	Кто до сих пор вовсе не знаком с медиазапросами, может поискать информацию в справочниках, или разобраться по ходу статьи, ничего сложно в них нет.
+</p>
+<p>
+	Вот основное применение медиазапросов в нашем адаптивном случае:
+</p>
+
+<pre class="h3"><code class="css">@media (max-width:1150px){
+  CSS код
+}
+</code></pre>
+
+<p>
+	Например:
+</p>
+
+<pre class="h3"><code class="css">@media (max-width:1150px){
+  img{
+    max-width:100%;
+    height:auto;
+  }
+  #subs form{
+    background:none;
+  }
+}
+</code></pre>
+<p>
+	Это можно читать так: если размер экрана равен или меньше 1150px, то применить вложенные правила. Этот код вставляется в любое место обычного .css файла, как и любой другой CSS код.
+</p>
+<p>
+	Что происходит в примере выше? Если экран посетителя равен или меньше 1150px, то сделаем изображения гибкими и уберём фон с заданного элемента.
+</p>
+<p>
+	Сразу замечу, что изображения можно было сделать резиновыми сразу же (для любых размеров), не обязательно было помещать этот код в медиазапрос, но мне так показалось логичней.
+</p>
+<p>
+	Благодаря таким медиазапросам, которые мне напоминают конструкцию if (условие) {выполнить} из PHP или других языков программирования, мы перестраиваем стили сайта в зависимости от размеров экрана как нам вздумается.
+</p>
+<p>
+	Вот как построены медиазапросы на данном блоге для обеспечения полной адаптивности:
+</p>
+
+<pre class="h3"><code class="css">@media (max-width:1170px){
+  img{
+    max-width:100%;
+    sheight:auto;
+  }
+  #menu>li{
+    font-size:22px;
+  }
+  #menu>li>a{
+    background:none;
+    padding-left:20px;
+  }
+  #subs form{
+    background:none;
+  }
+}
+@media (max-width:990px){
+  #gwNotice{
+    display:block;
+    background:orange;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -o-border-radius:5px;
+    -webkit-border-radius:5px;
+    padding:5px;
+  }
+  h1{
+    margin:30px auto;
+    font-size:30px;
+  }
+  #slogan{
+    display:none;
+  }
+  #width{
+    width:98%;
+  }
+  #up{
+    display:none;
+  }
+  table.gsc-search-box{
+    position:absolute;
+    top:82px;
+    left:0;
+    height:
+    30px;
+    width:275px !important;
+  }
+  .gsc-input-box{
+    width:200px;
+  }
+  #h ul{
+    text-align:center;
+    background:url(/images/footer.png);
+    width:100%;
+  }
+}
+@media (max-width:900px){
+  #menu>li{
+    font-size:20px;
+  }
+  #r{
+    font-size:14px;
+  }
+}
+@media (max-width:820px){
+  #menu{
+    text-align:center;
+    padding-top:3px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+  }
+  #menu>li:first-child{
+   display:none;
+  }
+  #menu>li{
+    display:block;
+    margin-top:10px;
+  }
+  #menu>li>a{
+    padding:0;
+    display:block;
+  }
+  #hidden{
+    display:none!important;
+  }
+}
+@media (max-width:680px){
+  #menu>li{
+    display:block;
+  }
+  #c{
+    width:100%;
+  }
+  #r{
+    display:none;
+  }
+}
+@media (max-width:506px){
+  table.gsc-search-box{
+    top:108px;
+  }
+}
+@media (max-height:650px){
+  #p{
+    position:static !important;
+  }
+}
+</code></pre>
+
+<p>
+	То есть в медиазапросах всё индивидуально, вы вписываете туда те изменения, которые нужны для конкретного сайта при определённом размере браузера. Для наглядности вы можете менять размер вашего дектопного браузера (ресайзить) и следить за постепенным применением стилей, описанных выше. Именно так и работают медиазапросы.
+</p>
+			</div>
+		</div>
+	</div>
+
+	<footer class="bg-dark text-light h4 mb-0">
+		<div class="container pt-4 pb-4">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="row p-1">
+						<div class="col-md-4 ">
+							<a href="index.html" class="underline-one footer-link">Главная</a>
+						</div>
+						<div class="col-md-4 ">
+							<a href="AbautUs.html" class="footer-link underline-one">О нас</a>
+						</div>
+						<div class="col-md-4 ">
+							<a href="Topics.html" class="footer-link underline-one">Темы</a>
+						</div>
+					</div>
+					<div class="row p-1 pt-2 ">
+						
+						
+						<div class="col-md-4 order-md-2 mb-3">
+							<div class="row pt-md-2">
+								<div class="col">
+									<a href="FlexBox.html" class="footer-link underline-one">Флексбокс</a>
+								</div>
+							</div>
+							<div class="row pt-md-2">
+								<div class="col">
+									<a href="Grid.html" class="footer-link underline-one">Грид</a>
+								</div>
+							</div>
+							<div class="row pt-md-2">
+								<div class="col">
+									<a href="MediaQueries.html" class="footer-link underline-one">Медиазапросы</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-8 text-white-50 h5 pt-2">
+							Весь материал на сайте представлен исключительно в рамках курсового проэкта для университета ХНУРЕ.© Gemoglabin2216
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1 offset-md-1">
+					<div class="row row-cols-md-1 text-center">
+						<div class="col-1 mb-2"><a href="https://www.facebook.com/nuretv"><img src="Image/icon-facebook-4494475.png" class="img-link" alt=""></a></div>
+						<div class="col-1 mb-2"><a href="https://www.instagram.com/nure_tv/?hl=ru"><img src="Image/icon-instagram-2111463.png" class="img-link " alt=""></a></div>
+						<div class="col-1 mb-2"><a href="https://t.me/nuretv/?hl=ru"><img src="Image/icon-telegram-2111646.png" class="img-link " alt=""></a></div>
+						<div class="col-1 mb-2"><a href="https://www.youtube.com/c/nuretv/featured"><img src="Image/icon-youtube-4494485.png" class="img-link" alt=""></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<script src="script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="hightlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+/*body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}*/
+
+body{
+	background-attachment: fixed;
+	background-image: linear-gradient(50deg,#B9BBCD , #e1e1e1 , #ebebeb, #FFF7E2);
+
+
+}
+
+
+a{
+	text-decoration: none !important;
+	list-style: none !important;
+	color: white ;
+
+}
+
+.element::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.element::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.element::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #23241f;
+	border: 2px solid #555555;
+}
+
+
+
+
+
+.text-shadow{
+	text-shadow: 3px 3px 3px #8b8b8b99;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+
+.font, p, h1{
+	font-family: "AnekGujarati", sans-serif;
+/*	font-size: 25px;*/
+}
+
+p, li{
+	font-size: 1.75rem;
+}
+
+
+.text-indent{
+	text-indent: 1.5em;
+}
+
+.blur{
+	filter: blur(2px);
+	z-index: 2;
+}
+
+.dimming{
+
+	background-size: cover;
+	box-shadow: inset 0px 0px 500px 5px rgba(0, 0, 0, 0.8);
+	color: #ECECEC;
+	text-shadow: 3px 3px 3px #252525;
+	font-weight: 600  !important;
+	background-position: center;
+	/*font-size: 5rem;*/
+	transition: 0.5s;
+}
+
+.dimming:hover{
+	transform: scale(0.98);
+	font-size: calc(1.625rem + 5.5vw);
+	box-shadow: inset 0px 0px 500px 15px rgba(0, 0, 0, 1);
+	color: #F3F3F3;
+	text-shadow: 0px 0px 5px #252525, 0px 0px 10px #F3F3F3;
+}
+
+.dimming-img1{
+	background-image: url(Image/3.png);
+}
+
+.dimming-img2{
+	background-image: url(Image/6.png);
+	background-position: cover;
+}
+
+.dimming-img3{
+	background-image: url(Image/0.png);
+}
+
+.footer-link{
+	color: white;
+}
+
+.footer-link:hover{
+	color: #54B854	 !important;
+	/*color: 	#F13BA1			 !important;*/
+
+}
+
+.img-link{
+	width: 30px;
+	height: 30px;
+}
+
+
+/*------------------style foe <pre> ------------------------------------*/
+
+
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  white-space: pre;
+  overflow: auto;
+  background-color: #23241f;
+  border: 1px solid #ddd;
+  /*max-height: 800px;*/
+  font-family: monospace;
+}
+pre code {
+  color: inherit;
+  background-color: transparent;
+  padding: 0;
+  display: block;
+}
+pre .line-number {
+  display: block;
+  float: left;
+  margin: 0 1em 0 -1em;
+  border-right: 1px solid #ddd;
+  text-align: right;
+}
+pre .line-number span {
+  display: block;
+  padding: 0 0.5em 0 1em;
+  color: #ccc;
+}
+pre .cl {
+  display: block;
+  clear: both;
+}
+
+.nure-img{
+		width: 274px;
+}
+
+button{
+	font-size: 2rem !important;
+}
+
+/*------------------------------------------------------------------*/
+
+.underline-one {
+	/*color: #00bfff;*/ /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.underline-one:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px; /* Высота линии */
+    background-color: #E33333; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.underline-one:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px; /* Высота линии */
+    background-color: #E33333; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+
+
+
+
+@font-face {
+font-family: "AnekGujarati"; 
+src: url(fonts/AnekGujarati-VariableFont_wdth,wght.ttf) format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+} 
+
+
+@media  (max-width: 768px) {
+  .nure-img{
+  	width: 100%;
+	}
+	button{
+		font-size: 1rem !important;
+	}
+}
