@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Сетка</title>
+	<title>Сітка</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -19,13 +19,13 @@
 				<div class="collapse navbar-collapse  justify-content-md-center text-end  h3" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item me-5 ">
-							<a class="nav-link  underline-one"  href="index.html">Главная</a>
+							<a class="nav-link  underline-one"  href="index.html">Головна</a>
 						</li>
 						<li class="nav-item me-5 ">
-							<a class="nav-link underline-one" aria-current="page" href="Topics.html">Темы</a>
+							<a class="nav-link underline-one" aria-current="page" href="Topics.html">Теми</a>
 						</li>
 						<li class="nav-item me-5 ">
-							<a class="nav-link underline-one"  href="AbautUs.html">О нас</a>
+							<a class="nav-link underline-one"  href="AbautUs.html">Про нас</a>
 						</li>
 					</ul>
 				</div>
@@ -37,61 +37,56 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="mt-5">
-					Основные понятия Grid Layout
+					Основні поняття Grid Layout
 				</h1>
-				<p>Тестовая запись</p>
 				<p>
-					Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы, и небольших элементов пользовательского интерфейса. Эта статья даёт общее представление о грид-раскладке и новой терминологии, которая является частью спецификации CSS Grid Layout Level 1. Более подробно показанные возможности будут описаны описаны далее в руководстве.
+					Грід-розкладка (CSS Grid Layout) являє собою двовимірну систему сіток у CSS. Гріди підійдуть і для верстки основних областей сторінки, і невеликих елементів користувацького інтерфейсу. Ця стаття дає загальне уявлення про грід-розкладку і нову термінологію, яка є частиною специфікації CSS Grid Layout Level 1. Більш детально показані можливості будуть описані описані описані далі в керівництві.
 				</p>
 				<h2 class="h1">
-					Что такое грид?
+					Що таке грід?
 				</h2>
 				<p>
-					Грид представляет собой пересекающийся набор горизонтальных и вертикальных линий, образующих колонки и строки. Элементы могут быть помещены в грид в пределах линий этих колонок и строк. Грид имеет следующие особенности:
+					Грид являє собою набір горизонтальних і вертикальних ліній, що перетинаються, які утворюють колонки та рядки. Елементи можуть бути поміщені в грід у межах ліній цих колонок і рядків. Грид має такі особливості:
 				</p>
 				<h2 class="h1">
-					Фиксированные и гибкие размеры полос
+					Фіксовані та гнучкі розміри смуг
 				</h2>
 				<p>
-					Вы можете создать грид с фиксированными размерами полоc, например используя пиксели. Это установит грид на определенный пиксель, соответствующим желаемому макету. Вы также можете создать грид с гибкими размерами, используя проценты или новую единицу измерения — «fr», разработанную для этой цели.
+					Ви можете створити грід із фіксованими розмірами смуг, наприклад використовуючи пікселі. Це встановить грід на певний піксель, що відповідає бажаному макету. Ви також можете створити грід із гнучкими розмірами, використовуючи відсотки або нову одиницю виміру - "fr", розроблену для цієї мети.
 				</p>
 				<h2 class="h1">
-					Расположение элемента
+					Розташування елемента
 				</h2>
 				<p>
-					Вы можете размещать элементы в заданном месте на гриде используя номера строк, имена или путём привязки к области грида. Грид также содержит алгоритм управления размещением элементов, не имеющих явной позиции на гриде.
+					Ви можете розміщувати елементи в заданому місці на гриді, використовуючи номери рядків, імена або шляхом прив'язки до області грида. Грид також містить алгоритм керування розміщенням елементів, які не мають явної позиції на гриді.
 				</p>
 				<h2 class="h1">
-					Создание дополнительных полос для хранения контента
+					Створення додаткових смуг для зберігання контенту
 				</h2>
 				<p>
-					Вы можете определить явную сетку с помощью грид-раскладки. Cпецификация грид-раскладки достаточно гибкая, чтобы добавить при необходимости дополнительные строки и колонки. Также в нее включены такие возможности как, например, добавление «стольких колонок, сколько будет помещено в контейнер».
+					Ви можете визначити явну сітку за допомогою грід-розкладки. Специфікація грід-розкладки досить гнучка, щоб додати за потреби додаткові рядки та колонки. Також до неї включено такі можливості як, наприклад, додавання "стількох колонок, скільки буде поміщено в контейнер".
 				</p>
 				<h2 class="h1">
-					Управление выравниванием
+					Керування вирівнюванням
 				</h2>
 				<p>
-					Грид содержит механизм выравнивания, таким образом мы можем контролировать, как элементы выравниваются после размещения в области сетки и как выравнивается вся сетка.
+					Грід містить механізм вирівнювання, тож ми можемо контролювати, як елементи вирівнюються після розміщення в області сітки і як вирівнюється вся сітка.
 				</p>
 				<h2 class="h1">
-					Управление перекрывающимся контентом
+					Керування контентом, що перекривається
 				</h2>
 				<p>
-					В ячейку или область грида может быть помещено несколько элементов; эти элементы могут частично перекрывать друг друга. Такое наложение можно контролировать с помощью свойства z-index.
+					У комірку або область грида може бути поміщено кілька елементів; ці елементи можуть частково перекривати один одного. Таке накладання можна контролювати за допомогою властивості z-index.
 				</p>
 				<p>
-					Грид – это мощная спецификация, и в сочетании с другими частями CSS, такими как flexbox, поможет вам создать макеты, которые ранее невозможно было построить в CSS. Все начинается с создания сетки в вашем грид-контейнере.
+					Грід - це потужна специфікація, і в поєднанні з іншими частинами CSS, такими як flexbox, допоможе вам створити макети, які раніше неможливо було побудувати в CSS. Усе починається зі створення сітки у вашому грід-контейнері.
 				</p>
+			<div class="mb-5 "><a href="MediaQueries.html" class="underline_link h3 ">Перейти до наступної теми</a></div>
 
 			</div>
 		</div>
 	</div>
-	<div class="container mb-3">
-		<div class="row justify-content-between">
-			<div class="col"><a href="FlexBox.html"><button type="button" class="btn btn-primary">FlexBox</button></a></div>
-			<div class="col"><a href="MediaQueries.html"><button type="button" class="btn btn-primary float-end">Media Queries</button></a></div>
-		</div>
-	</div>
+
 
 	
 	<footer class="bg-dark text-light h4 mb-0">
@@ -100,10 +95,10 @@
 				<div class="col-md-8 offset-md-2">
 					<div class="row p-1">
 						<div class="col-md-4 ">
-							<a href="index.html" class="underline-one footer-link">Главная</a>
+							<a href="index.html" class="underline-one footer-link">Головна</a>
 						</div>
 						<div class="col-md-4 ">
-							<a href="AbautUs.html" class="footer-link underline-one">О нас</a>
+							<a href="AbautUs.html" class="footer-link underline-one">Про нас</a>
 						</div>
 						<div class="col-md-4 ">
 							<a href="Topics.html" class="footer-link underline-one">Темы</a>
@@ -120,17 +115,22 @@
 							</div>
 							<div class="row pt-md-2">
 								<div class="col">
-									<a href="Grid.html" class="footer-link underline-one">Грид</a>
+									<a href="Grid.html" class="footer-link underline-one">Грід</a>
 								</div>
 							</div>
 							<div class="row pt-md-2">
 								<div class="col">
-									<a href="MediaQueries.html" class="footer-link underline-one">Медиазапросы</a>
+									<a href="MediaQueries.html" class="footer-link underline-one">Медіазапити</a>
+								</div>
+							</div>
+							<div class="row pt-md-2">
+								<div class="col">
+									<a href="Lessons.html" class="footer-link underline-one">Уроки</a> 
 								</div>
 							</div>
 						</div>
 						<div class="col-md-8 text-white-50 h5 pt-2">
-							Весь материал на сайте представлен исключительно в рамках курсового проэкта для университета ХНУРЕ.© Gemoglabin2216
+							© 2023 Всі права захищені.
 						</div>
 					</div>
 				</div>
@@ -145,6 +145,7 @@
 			</div>
 		</div>
 	</footer>
+	<button onclick="topFunction()" id="scroll-to-top" title="Go to top">↑</button>
 
 	<script src="script.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

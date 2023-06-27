@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Examples</title>
+	<style>
+
+		html {
+			font-size: 16px; /* Начальный размер шрифта */
+		}
+
+		.main-nav {
+			display: flex;
+			justify-content: center;
+			background-color: #333;
+			padding: 10px;
+		}
+
+		.main-nav ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.main-nav li {
+			margin: 0 30px;
+		}
+
+		.main-nav li a{
+			font-size: 24px;
+			color: white;
+			text-decoration: none;
+		}
+
+		@media screen and (max-width: 768px) {
+			.main-nav ul {
+				flex-direction: column;
+			}
+
+			.main-nav li {
+				margin: 10px 0;
+			}
+		}
+
+
+
+		.responsive-image {
+			max-width: 100%;
+			height: auto;
+		}
+
+
+
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.col-3 {
+			width: 25%;
+			padding: 10px;
+			box-sizing: border-box;
+			border: 1px solid red;
+		}
+
+		.col-6 {
+			width: 50%;
+			padding: 10px;
+			box-sizing: border-box;
+			border: 1px solid blue;
+		}
+
+		@media screen and (max-width: 768px) {
+			.col-3 {
+				width: 100%;
+			}
+			.col-6 {
+				width: 100%;
+			}
+		}
+
+		.adaptive-text {
+			font-size: 4vw; /* Размер шрифта в зависимости от ширины экрана */
+		}
+		@media (max-width: 767px) {
+			.adaptive-text {
+				font-size: 2rem; /* Новый размер шрифта для мобильных устройств */
+			}
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<nav class="main-nav">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+
+	
+	<div class="row adaptive-text">
+		<div class="col-3">
+			<p>Column 1</p>
+			<img src="https://selenium-python.com/wp-content/uploads/2017/11/locating-web-elements-selenium.jpg" alt="Image" class="responsive-image">
+		</div>
+		<div class="col-6">
+			<p>Column 2</p>
+		</div>
+		<div class="col-3">
+			<p>Column 3</p>
+		</div>
+	</div>
+
+	
+</body>
+</html>

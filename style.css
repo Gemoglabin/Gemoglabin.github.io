@@ -7,16 +7,12 @@
 body{
 	background-attachment: fixed;
 	background-image: linear-gradient(50deg,#B9BBCD , #e1e1e1 , #ebebeb, #FFF7E2);
-
-
 }
-
 
 a{
 	text-decoration: none !important;
 	list-style: none !important;
 	color: white ;
-
 }
 
 .element::-webkit-scrollbar-track
@@ -37,10 +33,6 @@ a{
 	background-color: #23241f;
 	border: 2px solid #555555;
 }
-
-
-
-
 
 .text-shadow{
 	text-shadow: 3px 3px 3px #8b8b8b99;
@@ -103,6 +95,10 @@ p, li{
 	background-image: url(Image/0.png);
 }
 
+.dimming-img4{
+	background-image: url(Image/shutterstock_1.png);
+}
+
 .footer-link{
 	color: white;
 }
@@ -116,6 +112,22 @@ p, li{
 .img-link{
 	width: 30px;
 	height: 30px;
+}
+
+
+
+.nav-tabs .nav-link.active{
+	border: 2px solid #23241f !important;
+	border-bottom: 0px !important;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	background: none !important;
+	color: black !important;
+}
+
+.underline_link{
+	font-style: italic;
+ 	text-decoration: underline !important;
 }
 
 
@@ -198,8 +210,104 @@ button{
     transition: width 0.5s;  /* Время эффекта */
 }
 
+/*------------------------------------------------------------------*/
 
 
+/* Стили для кнопки */
+#scroll-to-top {
+  display: none; /* Кнопка будет скрыта до тех пор, пока пользователь не прокрутит страницу */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #0d6efd;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* Стиль для кнопки при наведении */
+#scroll-to-top:hover {
+  background-color: #198754;
+}
+
+
+/*------------------------------------------------------------------*/
+
+/* Стили для содержания */
+.toc {
+	width: 100%;
+	background-color: #E7E7E7;
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.toc ul{
+	list-style: none;
+}
+
+/* Стили для ссылок в содержании */
+.toc a {
+	display: block;
+	margin-bottom: 5px;
+	padding: 5px;
+	text-decoration: none;
+	color: #333;
+	transition: background-color 0.3s ease;
+}
+
+/* Стили для ссылок в содержании при наведении */
+.toc a:hover {
+	background-color: #ccc;
+}
+
+/*------------------------------------------------------------------*/
+
+    .image-container {
+      position: relative;
+
+      overflow: hidden;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    
+    .overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+/*------------------------------------------------------------------*/
 
 @font-face {
 font-family: "AnekGujarati"; 
@@ -217,3 +325,10 @@ font-weight: normal;
 		font-size: 1rem !important;
 	}
 }
+
+
+
+
+
+
+      
